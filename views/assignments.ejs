@@ -38,8 +38,42 @@
                         <td><%= assignmentList[count].course %></td>
                         <td><%= assignmentList[count].description %></td>
                         <td><%= assignmentList[count].dueDate ? assignmentList[count].dueDate.toISOString().split('T')[0] : '' %></td>
-                        <td><%= assignmentList[count].priority %></td>
-                        <td><%= assignmentList[count].status %></td>
+                        <!-- Display assignment priority using Bootstrap badges -->
+                        <td>
+                            <% if (assignmentList[count].priority === 'High') { %>
+
+                                <span class="badge bg-danger">High</span>
+
+                            <% } else if (assignmentList[count].priority === 'Medium') { %>
+
+                                <span class="badge bg-warning text-dark">Medium</span>
+
+                            <% } else { %>
+
+                                <span class="badge bg-success">
+                                    <%= assignmentList[count].priority %>
+                                </span>
+
+                            <% } %>
+                        </td>
+                        <!-- Display assignment progress using Bootstrap badges -->
+                        <td>
+                            <% if (assignmentList[count].status === 'Completed') { %>
+
+                                <span class="badge bg-success">Completed</span>
+
+                            <% } else if (assignmentList[count].status === 'In Progress') { %>
+
+                                <span class="badge bg-primary">In Progress</span>
+
+                            <% } else { %>
+
+                                <span class="badge bg-secondary">
+                                    <%= assignmentList[count].status %>
+                                </span>
+
+                            <% } %>
+                        </td>
                         <!-- Assignment action buttons -->
                         <td>
                             <a href="/assignments/edit/<%= assignmentList[count]._id %>"

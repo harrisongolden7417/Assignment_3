@@ -1,20 +1,41 @@
 // Import Mongoose
 let mongoose = require('mongoose');
 
-// Define the structure of an assignment document
+// Define the assignment schema and validation rules
 let assignmentModel = mongoose.Schema({
-    name: String,
-    course: String,
-    description: String,
-    dueDate: Date,
-    priority: String,
-    status: String
+    name: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    course: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    description: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    dueDate: {
+        type: Date,
+        required: true
+    },
+    priority: {
+        type: String,
+        required: true,
+        enum: ['Low', 'Medium', 'High']
+    },
+    status: {
+        type: String,
+        required: true,
+        enum: ['Not Started', 'In Progress', 'Completed']
+    }
 },
 {
     collection: "assignments"
 });
 
-
-
-// Export the assignment model for use in other files
+// Export the assignment model
 module.exports = mongoose.model('Assignment', assignmentModel);

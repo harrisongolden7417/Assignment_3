@@ -1,8 +1,193 @@
+/* General website styling */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6fa;
+    color: #14243b;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-a {
-  color: #00B7FF;
+/* Main page content */
+main {
+    flex: 1;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #14243b !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-left: 10px;
+}
+
+/* Page headings */
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+/* Home page welcome section */
+.hero-section {
+    background-color: #18375c;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .lead {
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+/* Welcome section label */
+.hero-label {
+    color: #a9c8f2;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Home page feature cards */
+.feature-card {
+    border: 1px solid #dce3ed;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card .card-title {
+    color: #2563eb;
+}
+
+.feature-card .card-text {
+    color: #64748b;
+}
+
+/* Primary buttons */
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+/* Shared footer */
+footer {
+    background-color: #14243b !important;
+    color: white;
+    margin-top: auto;
+}
+
+/* Mobile screen adjustments */
+@media (max-width: 767px) {
+    .hero-section {
+        padding: 25px !important;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section .btn {
+        margin-bottom: 10px;
+    }
+}
+
+/* Assignment table styling */
+.table-responsive {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.table {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.table-dark {
+    --bs-table-bg: #14243b;
+}
+
+/* Priority and status indicators */
+.table .badge {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+}
+
+/* Assignment action buttons */
+.table .btn {
+    margin: 3px;
+}
+
+/* Add and edit assignment forms */
+.assignment-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Form labels */
+.form-label {
+    font-weight: bold;
+}
+
+/* Form input styling */
+.form-control,
+.form-select {
+    border-radius: 6px;
+    padding: 10px;
+}
+
+/* Form buttons */
+.assignment-form .btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* Highlight the current navigation page */
+.navbar .nav-link.active {
+    color: white;
+    font-weight: bold;
+    background-color: #29476b;
+    border-radius: 6px;
+}
+
+/* Navigation hover styling */
+.navbar .nav-link:hover {
+    color: white;
+}
+
+/* Mobile navigation and form adjustments */
+@media (max-width: 767px) {
+
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        margin: 10px auto 0 !important;
+    }
+
+    .nav-link {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .assignment-form {
+        padding: 20px;
+    }
 }

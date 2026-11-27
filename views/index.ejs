@@ -1,25 +1,101 @@
-<%- include('partials/header.ejs') %>
-<%- include('partials/main_nav.ejs') %>
+<%- include('partials/header') %>
+<%- include('partials/main_nav') %>
 
 <!-- Main home page content -->
 <main class="container mt-5 mb-5">
 
-    <h1>Welcome to Assignment Tracker</h1>
+    <!-- Welcome section -->
+    <section class="hero-section p-5 rounded mb-5">
 
-    <p>
-        Manage your academic assignments, organize deadlines
-        and track your progress in one convenient location.
-    </p>
+        <p class="hero-label">
+            YOUR ACADEMIC WORKSPACE
+        </p>
 
-    <p>
-        Create, view, update and delete assignments
-        to stay organized throughout the semester.
-    </p>
+        <h1>Stay organized. Stay ahead.</h1>
 
-    <a href="/assignments" class="btn btn-primary">
-        View Assignments
-    </a>
+        <p class="lead">
+            Manage your assignments, track deadlines and
+            prioritize your academic responsibilities in
+            one place.
+        </p>
+
+        <a href="/assignments" class="btn btn-primary">
+            View Assignments
+        </a>
+
+        <a href="/assignments/add" class="btn btn-outline-light">
+            Add Assignment
+        </a>
+
+    </section>
+
+    <!-- Application features -->
+    <section>
+
+        <h2 class="text-center mb-4">
+            Manage your academic workload
+        </h2>
+
+        <div class="row">
+
+            <!-- Deadline tracking -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 feature-card">
+                    <div class="card-body">
+
+                        <h3 class="card-title h5">
+                            Track Deadlines
+                        </h3>
+
+                        <p class="card-text">
+                            Keep upcoming assignment due dates
+                            organized and avoid missing deadlines.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Priority management -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 feature-card">
+                    <div class="card-body">
+
+                        <h3 class="card-title h5">
+                            Set Priorities
+                        </h3>
+
+                        <p class="card-text">
+                            Organize assignments by priority
+                            and focus on important tasks.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress tracking -->
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 feature-card">
+                    <div class="card-body">
+
+                        <h3 class="card-title h5">
+                            Monitor Progress
+                        </h3>
+
+                        <p class="card-text">
+                            Track assignments from not started
+                            to in progress and completed.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
-<%- include('partials/footer.ejs') %>
+<%- include('partials/footer') %>

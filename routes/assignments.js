@@ -93,8 +93,11 @@ router.post('/edit/:id', async (req, res, next) => {
         };
 
         // Update the selected assignment in MongoDB
+        // Update the assignment and enforce schema validation
         let result = await Assignment.findByIdAndUpdate(
-            id, updatedAssignment
+            id,
+            updatedAssignment,
+            { runValidators: true }
         );
 
         if (!result) {
